@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script rel="text/javascript" href="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -16,7 +18,7 @@
 </head>
 
 <body>
-    <div class="sticky-top">
+    <div class="sticky-top" >
         <header class="site-header">
             <!-- <h1 class="logo">Yhalla Movers</h1> -->
             <img class="logo" src="images/logo__.png"/>
@@ -24,15 +26,14 @@
                 <h4>Menu-button</h4>
             </div>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#" class="button button_highlight sm-button">Get in touch</a>
+                <a href="#banner">Home</a>
+                <a href="#service">Services</a>
+                <a href="#get-in-touch" class="button button_highlight sm-button">Get in touch</a>
             </nav>
         </header>
     </div>
         <!-- BANNER -->
-        <div id="banner"
+        <div id="banner" class="scollspy"
             style="background: url('images/room-interior-design.jpg') rgba(7, 85, 191, 0.3); background-size: cover; background-blend-mode: multiply; height: 90vh;">
             <!-- <div id="banner"> -->
             <div class="wrapper">
@@ -47,8 +48,8 @@
                     </h2>
 
                     <div class="button_wrapper">
-                        <a href="#" class="button button_highlight">Our works</a>
-                        <a href="#" class="button button_secondary">Get a quote</a>
+                        <a href="#service" class="button button_highlight">Our works</a>
+                        <a href="#get-in-touch" class="button button_secondary">Get a quote</a>
                     </div>
                     <img style="display: none"
                         src="https://github.com/ajayrexluega/Design-Agency-Landing-Page/blob/master/images/arrows_down.png?raw=true"
@@ -102,7 +103,7 @@
 
 
         <!-- WHAT WE DO -->
-        <section class="section-bg" data-scroll-index="7">
+        <section class="section-bg scrollspy" id="service" data-scroll-index="7">
             <div class="wrapper">
                 <h1 class="heading pt-100">What we do</h1>
                 <div class="row">
@@ -195,7 +196,7 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div class="testimonial_story__slide">
-                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                                
                                 <p class="testimony">I got a referral from a friend. The services were bespoke, you guys made my day!
                                     Hoping to patronize you again in near future.
                                 </p>
@@ -204,7 +205,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="testimonial_story__slide">
-                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                                
                                 <p class="testimony">We contacted Yhalla Movers for fumigation due to bug infestation in one of our hostels recently.
                                     They were fast and efficient! Nice Job!
                                 </p>
@@ -213,7 +214,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="testimonial_story__slide">
-                                <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                                
                                 <p class="testimony">Excellent and reliable relocation services. Got a quote few days ago and I'm now in my new place!
                                 </p>
                                 <h4>- Ekeleme O.P.</h4>
@@ -240,8 +241,8 @@
         </section> -->
 
         <!-- CONTACT FORM-->
-        <section class="section-bg" style="background-image: url(https://i.ibb.co/9p3Cnk9/slider-2.jpg);"
-            data-scroll-index="7">
+        <section class="section-bg scrollspy" style="background-image: url(https://i.ibb.co/9p3Cnk9/slider-2.jpg);"
+            data-scroll-index="7" id="get-in-touch">
             <div class="overlay pt-100 pb-100 ">
                 <div class="container">
                     <div class="row">
@@ -397,6 +398,13 @@
         <!-- END FOOTER -->
         <!-- copyright 2016 Jayrex Acilo CreativeDesign. Credits for Design -
             Mackenzie Child</p> -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script>
+                $(document).ready(()=>{
+                    $('.scrollspy').scrollSpy();
+                });
+            </script>
     </body>
 
 </html>

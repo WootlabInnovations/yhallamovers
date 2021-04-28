@@ -1,5 +1,5 @@
 * {
-	font-family: "roboto", "sans-serif";
+	font-family: "Montserrat", "sans-serif";
 	/* box-sizing: border-box; */
 }
 
@@ -15,10 +15,11 @@
 	position: fixed;
 } */
 .sticky-top{
-	position:-webkit-sticky;
-	position:sticky;top:0;
-	z-index:1020;
-	background-color: #f0f8ff;
+	position:-webkit-sticky !important;
+	position:sticky !important;
+	top:0 !important;
+	z-index:1020 !important;
+	background-color: #f0f8ff !important;
 }
 
 header div.menu-button {
@@ -50,14 +51,14 @@ header .button {
 }
 
 header nav {
-	float: right;
+	float: right !important;
 	margin: 0;
 }
 
 header nav a {
 	text-decoration: none;
 	color: #000;
-	font-weight: 700;
+	font-weight: 400;
 	margin-left: 2rem;
 }
 
@@ -84,6 +85,7 @@ header nav a {
 
 #banner .content .title {
 	font-size: 3.5rem;
+	font-weight: 600;
 	margin: 0;
 }
 
@@ -100,7 +102,7 @@ header nav a {
 	outline: none;
 	border-radius: 2rem;
 	padding: 0.6rem 3.5rem;
-	font-weight: 700;
+	font-weight: 500;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
@@ -120,6 +122,7 @@ header nav a {
 
 .button_highlight {
 	background: #0755BF;
+	color: white !important;
 }
 
 .button_secondary {
@@ -201,7 +204,7 @@ header nav a {
 	margin: 0 0 0.75rem 0;
 	text-align: center;
 	color: #fff;
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 #past_work {
@@ -248,7 +251,8 @@ header nav a {
 }
 
 .our_services__title {
-	font-size: 3rem;
+	font-size: 2rem;
+	font-weight: ;
 	width: 80%;
 	padding-left: 50px;
 	margin-bottom: 10px !important;
@@ -431,6 +435,7 @@ footer a {
 
 	#contact h1.title {
 		font-size: 2rem;
+		font-weight: bold;
 		margin: 0;
 	}
 
@@ -1225,6 +1230,7 @@ h2.contact-title {
 .section-bg .info-right h4 {
 	color: #fff;
 	font-size: 18px;
+	font-weight: 400;
 }
 .contact-page .info-left i {
 	color: #fe846f;
@@ -1249,6 +1255,7 @@ h2.contact-title {
 
 .contact-us-form h2.title {
 	font-size: 2em;
+	font-weight: 400;
 	margin-bottom: 30px;
 }
 
