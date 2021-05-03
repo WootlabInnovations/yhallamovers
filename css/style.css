@@ -1,10 +1,18 @@
+html{
+	width: 100vw;
+}
 * {
 	font-family: "Montserrat", "sans-serif";
 	/* box-sizing: border-box; */
 }
-
-.wrapper, .site-header {
-	width: 1300px;
+ .site-header {
+	width: 100vw;
+	max-width: 90%;
+	height: 70px;
+	margin: 0 auto;
+}
+.wrapper {
+	width: 100vw;
 	max-width: 90%;
 	margin: 0 auto;
 }
@@ -71,6 +79,7 @@ header nav a {
 #banner {
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 90vh;
 }
 
 #banner .content {
@@ -182,12 +191,14 @@ header nav a {
 #services .card__3::after {
 	content: " ";
 	position: absolute;
-	left: 50%;
+	left: 60%;
 	bottom: -50px;
-	height: 50px;
+	height: 150px;
 	border-left: 2px solid #e2e0ee;
 }
-
+ul.card__1, ul.card__2,ul.card__3{
+	height: 300px !important;
+}
 #services::before {
 	content: " ";
 	position: absolute;
@@ -456,6 +467,43 @@ footer a {
 		font-size: 0.8rem;
 	}
 }
+.menu-bar{
+	display: none;
+	cursor: pointer;
+}
+.sidenav{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0vw;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+	opacity: .9;
+}
+.sidenav-anchor{
+	color: white !important;
+	text-decoration: none;
+	cursor: pointer;
+}
+.ul-nav{
+	display: none;
+	padding: 20px;
+	transition: all 0.5s ease-in-out;
+}
+@media screen and screen (max-width:728px) {
+	#large{
+		display: none;
+	}
+}
+@media  screen and (min-width:728px) {
+	.services-margin{
+		display: flex;
+		justify-content: space-evenly;
+	}
+	
+}
 
 @media screen and (max-width: 645px) {
 	header h1 {
@@ -464,14 +512,51 @@ footer a {
 		width: 100%;
 		padding-bottom: 25px;
 	}
-
+	ul.card__1, ul.card__2,ul.card__3{
+		height: 200px !important;
+	}
+	#banner{
+		height: 60vh;
+	}
+	div.content{
+		position: relative;
+		/* left: -20px; */
+		top: 50px;
+		width: 90vw;
+	}
+	.services-margin{
+		margin-left: 30px;
+	}
+	#banner .content .button_wrapper .button{
+		margin: 0.65rem 1rem;
+    	display: block;
+	}
+	.menu-bar{
+		display: block;
+		border: none;
+		background-color: inherit;
+	}
+	.ul-nav{
+		display: none;
+		padding: 20px;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	.li-nav{
+		margin: 10px;
+		list-style: none;	
+	}
+	.sidenav{
+        transition: all 0.3s ease-in-out;
+        /* z-index: -100; */
+    }
 	header nav {
 		float: right;
 		display: block;
 		width: 100%;
 		text-align: center;
 	}
-
+	
 	#banner .content .title {
 		font-size: 2rem;
 		margin: 0;
@@ -629,11 +714,15 @@ footer a {
 		line-height: 1.75;
 		margin: 0 auto 2.7rem auto;
 	}
+	#banner{
+		height: 60vh;
+	}
 
 	.button_wrapper .button_secondary {
-		position: absolute;
+		overflow: auto;
+		/* position: absolute;
 		left: 29%;
-		bottom: 37%;
+		bottom: 37%; */
 	}
 
 	/* - - - - - CONTACT - - - - - */
@@ -1313,7 +1402,7 @@ h2.contact-title {
 	margin-left: auto;
 	max-width: 1140px;
 }
-.section-bg .row,
+/* .section-bg .row,
 .footer-section .row {
 	display: -ms-flexbox;
 	display: flex;
@@ -1337,7 +1426,7 @@ h2.contact-title {
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 100%;
-}
+} */
 
 .section-bg .d-flex {
 	display: -ms-flexbox !important;
@@ -1428,11 +1517,11 @@ h2.contact-title {
 	font-family: "Montserrat", "sans-serif" !important;
 }
 
-.footer-section .col-md-3 {
+/* .footer-section .col-md-3 {
 	-ms-flex: 0 0 25%;
 	flex: 0 0 25%;
 	max-width: 25%;
-}
+} */
 
 .footer-section .list-inline{
 	padding-left:0;
